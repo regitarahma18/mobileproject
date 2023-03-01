@@ -40,18 +40,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 //Percobaan 1 : Menambahkan Kondisi
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
-  String _text = " ";
-  void _incrementCounter() {
-    setState(() {
-
-      _counter++;
-      if (_counter > 10) {
-        _counter = 1;
-      }
-    });
-}
+// class _MyHomePageState extends State<MyHomePage> {
+//   int _counter = 1;
+//   String _text = " ";
+//   void _incrementCounter() {
+//     setState(() {
+//
+//       _counter++;
+//       if (_counter > 10) {
+//         _counter = 1;
+//       }
+//     });
+// }
 
 //Percobaan 2 : Menampilkan Bilangan Ganjil atau Genap
 
@@ -117,39 +117,39 @@ class _MyHomePageState extends State<MyHomePage> {
 //   }
 
 //Tugas Buatlah program untuk menampilkan bilangan prima mulai dari 1 sampai n!
-// class _MyHomePageState extends State<MyHomePage> {
-//   int _counter = 0;
-//   String _text = " ";
-//
-//   void _incrementCounter() {
-//     setState(() {
-//       //Tugas
-//       _counter++;
-//       int a = 0;
-//       if(_counter>50){
-//         _counter = 1;
-//       }
-//       _text = "Bilangan Prima : ";
-//         for (int i = 2; i <= _counter; i++) {
-//           //if (_counter % i == 0) {
-//           a = 0;
-//           for (int j = 1; j <= i; j++) {
-//             if (i % j == 0) {
-//               a++;
-//             }
-//           }
-//           if (a == 2) {
-//             //print(i);
-//             _text += '${i}, ';
-//           }
-//
-//             // else{
-//             //   _text = "Bukan Bilangan Prima ";
-//             // }
-//
-//         }
-//     });
-//   }
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+  String _text = " ";
+
+  void _incrementCounter() {
+    setState(() {
+      //Tugas
+      _counter++;
+      int a = 0;
+      if(_counter>50){
+        _counter = 1;
+      }
+      _text = "Bilangan Prima : ";
+        for (int i = 2; i <= _counter; i++) {
+          //if (_counter % i == 0) {
+          a = 0;
+          for (int j = 1; j <= i; j++) {
+            if (i % j == 0) {
+              a++;
+            }
+          }
+          if (a == 2) {
+            //print(i);
+            _text += '${i}, ';
+          }
+
+            // else{
+            //   _text = "Bukan Bilangan Prima ";
+            // }
+
+        }
+    });
+  }
 
   //Percobaan 2 : Menampilkan Bilangan Ganjil atau Genap
   @override
