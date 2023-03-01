@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Hello World'),
+      home: const MyHomePage(title: 'Regita : Hello World'),
     );
   }
 }
@@ -112,21 +112,29 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       //Tugas
       _counter++;
+      int a = 0;
       if(_counter>50){
-        _counter = 0;
+        _counter = 1;
       }
-        int a = 0;
-        for (int i = 1; i <= _counter; i++) {
-          if (_counter % i == 0) {
-            a++;
+      _text = "Bilangan Prima : ";
+        for (int i = 2; i <= _counter; i++) {
+          //if (_counter % i == 0) {
+          a = 0;
+          for (int j = 1; j <= i; j++) {
+            if (i % j == 0) {
+              a++;
+            }
           }
-          if(a == 2){
-            _text = "Bilangan Prima ";
+          if (a == 2) {
+            //print(i);
+            _text += '${i}, ';
           }
-          else{
-            _text = "Bukan Bilangan Prima ";
-          }
-          }
+
+            // else{
+            //   _text = "Bukan Bilangan Prima ";
+            // }
+
+        }
     });
   }
 
